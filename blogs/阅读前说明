@@ -1,0 +1,8 @@
+'''
+name:在线笔记本
+author:wangyao
+data:8.15
+function: 用户通过登录注册，完成登录，可以写自己的文章（不过目前功能比较简陋，正在不断完善，读者也可以进行修改，或指出其缺点）
+environment: python3 + Django 1.11.8 
+
+'''
