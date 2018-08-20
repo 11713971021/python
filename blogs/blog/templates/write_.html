@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+
+{% block forms %}
+<form action="" method="post">
+{% csrf_token %}
+{% endblock %}
+
+
+{% block text %}
+    <textarea class="form-control" rows="40" name="body"></textarea>
+{% endblock %}
+
+{% block title %}
+<textarea class="form-control" rows="3" name="title" placeholder="输入标题" ></textarea><br>
+<input type="text" class="form-control" placeholder="输入时间" name="times">
+{% endblock %}
+
+{% block button %}
+<br>
+
+<style>
+    .btn{
+        padding: 14px 16px;
+        margin-left: 20%;
+    }
+
+</style>
+<a href="{% url 'index' %}"><input type="submit" class="btn btn-success" value="提交"></input></a>
+<a href="{% url 'index' %}"><button type="button" class="btn btn-info">回到主页</button></a>
+{% endblock %}
+
+{% block bar %}
+
+
+{% endblock %}
+
+
+ {% block num1　%}
+    记录你的美
+ {% endblock%}
+
+ {% block n_write %}
+ {{name_write}}
+{% endblock %}
+
+{% block login_delete%}
+{%  endblock %}
+
+{% block form1 %}
+</form >
+
+{% endblock %}
+
+{% block yes %}
+
+{% endblock%}

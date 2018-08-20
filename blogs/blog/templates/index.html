@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://v3.bootcss.com/examples/blog/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Erery Day</title>
+
+   
+    <link href="/static/css/bootstrap_3.3.7_css_bootstrap.min.css" rel="stylesheet">
+
+   
+    <link href="./static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <link href="/static/css/blog.css" rel="stylesheet">
+
+   
+    <script src="/static/js/ie-emulation-modes-warning.js.下载"></script>
+   
+
+  </head>
+
+  <body>
+  {% block forms %}
+  {%  endblock %}
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="{% url 'index' %}">Home</a>
+          <a class="blog-nav-item" href="{% url 'writes' %}">写下最完美的</a>
+          <a class="blog-nav-item" href="{%  url 'regis'%}">
+          {% block n_write %}
+          {{name}}
+          {% endblock %}
+          </a>
+          {% block login_delete%}
+         <!--  <a class="blog-nav-item" href="{% url 'login' %}">{}</a> -->
+          <a class="blog-nav-item" href="{% url 'deletes'%}">退出</a>
+          {% endblock %}
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">
+        {% block num1%}
+        every day记录您的美
+        {% endblock %}
+        </h1>
+        <p class="lead blog-description">一个人到世界来,来做什么? 写最幸福的，写最好看的，写最真真实的自己．</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+
+            {% block bar %}
+            <h2 class="blog-post-title"></h2>
+            {% endblock %}
+
+
+            
+            {% block title %}
+            <p>欢迎{{name}}</p>
+            {% endblock %}
+            {% block yes %}
+            <p>
+              <form class="form-inline" method="post" action="/page/">
+              {% csrf_token%}
+  
+  <div class="form-group">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <input type="text" class="form-control" name="ids" placeholder="输入序列号查询">
+  </div>
+  <button type="submit" class="btn btn-default">查询</button>
+</form>
+            </p>
+            {% endblock %}
+            <hr>
+
+            {% block text %}
+
+            
+              {% for blog in blogs %}
+            
+              <h4 >序号:{{blog.id}}</h4>
+               <h2 >标题:{{blog.title}}</h2>
+               <h5>times:{{blog.times}}</h5>
+               <hr>
+               
+
+
+              
+
+                
+             
+
+                
+                
+               
+              
+        
+              {% endfor %}
+              
+
+
+            {% for blog in blogs %}
+            <h4> {{blog.times}} </h4>
+
+            {% endfor %}
+
+
+
+
+           
+            
+            <ul type='None'>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <p></p>
+            <ol type='None'>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+            <p></p>
+          </div><!-- /.blog-post -->
+
+          
+
+
+
+          
+
+          <nav>
+            <ul class="pager">
+              <!-- <li><a href="#"></a></li> -->
+              <li><a href="#">顶部</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>使用步骤</h4>
+            <p>日记本 <em>点击写下最完美的是写日记</em> 此应用会不断更新，谢谢！</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://v3.bootcss.com/examples/blog/#"></a></li>
+              
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <!-- <p>Blog template built for <a href="http://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p> -->
+      <p>
+        <a href="#">Author:Mr.wang</a>
+      </p>
+    </footer>
+{% endblock %}
+{% block button%}
+{%endblock%}
+
+{% block form1 %}
+{% endblock %}
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery_1.12.4_jquery.min.js.下载"></script>
+
+
+    <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery.min.js"><\/script>')</script>
+
+
+    <script src="/static/js/bootstrap_3.3.7_js_bootstrap.min.js.下载"></script>
+    
+
+    <script src="/static/js/ie10-viewport-bug-workaround.js.下载"></script>
+
+  
+
+</body></html>

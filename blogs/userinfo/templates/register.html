@@ -1,0 +1,38 @@
+{% extends 'login.html' %}
+{% block Title %}
+        注册
+{% endblock %}
+
+
+{%block userbe%}
+{{msg}}
+
+{% endblock%}
+
+{%block pwd1%}
+  <div class="form-group has-warning">
+  <label class="control-label" for="inputWarning1">确认密码</label>
+  <input type="password" class="form-control"  name="password1">
+  <span id="helpBlock2" class="help-block">{{error}}</span>
+</div>
+{% endblock %}
+
+
+
+{% block sub %}
+    <button type="submit" class="btn btn-primary btn-lg">确认</button>
+  <a type="button" class="btn btn-default btn-lg" href="{% url 'login'%}">登录</a>
+{% endblock%}
+
+{% block email%}
+</div>
+
+<div class="form-group has-warning">
+  <label class="control-label" for="inputWarning1" name='qq'>qq号</label>
+  <input type="email" class="form-control" id="inputWarning1" name="qq">
+</div>
+{% endblock%}
+
+{% block code %}
+{{code_error}}
+{% endblock %}
